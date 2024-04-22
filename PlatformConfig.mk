@@ -32,6 +32,12 @@ BOARD_KERNEL_CMDLINE += androidboot.bootdevice=1d84000.ufshc
 BOARD_KERNEL_CMDLINE += swiotlb=2048
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
 
+
+TARGET_KERNEL_CLANG_COMPILE := true
+KERNEL_LLVM_SUPPORT := true
+TARGET_KERNEL_CONFIG := aosp_lena_pdx213_defconfig
+TARGET_KERNEL_SOURCE := kernel/sony/kernel
+
 # Serial console
 #BOARD_KERNEL_CMDLINE += earlycon=msm_geni_serial,0xa90000
 
